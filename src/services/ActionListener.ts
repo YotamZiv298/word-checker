@@ -2,11 +2,10 @@
  * A simple event emitter/listener for handling game actions
  */
 export class GameEventEmitter {
-  #listeners: Record<string, Array<(data?: unknown) => void>>;
+  private readonly listeners: Record<string, Array<(data?: unknown) => void>>;
 
-  // Init the class
   constructor() {
-    this.#listeners = {};
+    this.listeners = {};
   }
 
   /**
@@ -15,11 +14,11 @@ export class GameEventEmitter {
    * @param listener - Function to invoke upon action call
    */
   registerListener(action: string, listener: (data?: unknown) => void): void {
-    if (!this.#listeners[action]) {
-      this.#listeners[action] = [];
+    if (!this.listeners[action]) {
+      this.listeners[action] = [];
     }
 
-    this.#listeners[action].push(listener);
+    this.listeners[action].push(listener);
   }
 
   /**
@@ -27,7 +26,7 @@ export class GameEventEmitter {
    * @param action - The action to remove
    */
   removeListener(action: string): void {
-    delete this.#listeners[action];
+    delete this.listeners[action];
   }
 
   /**
@@ -36,11 +35,11 @@ export class GameEventEmitter {
    * @param data - The data to pass to all registered listeners as parameter
    */
   emit(action: string, data?: unknown): void {
-    if (!this.#listeners[action] || this.#listeners[action].length === 0) {
+    if (!this.listeners[action] || this.listeners[action].length === 0) {
       throw new Error(`Can't emit an event. Event "${action}" doesn't exist.`);
     }
 
-    for (const listener of this.#listeners[action]) {
+    for (const listener of this.listeners[action]) {
       listener(data);
     }
   }

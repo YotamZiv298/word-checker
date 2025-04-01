@@ -2,7 +2,7 @@
  * Service for checking words against an English dictionary
  */
 export class DictionaryService {
-  private apiUrl = 'https://api.dictionaryapi.dev/api/v2/entries/en/';
+  private readonly apiUrl = 'https://api.dictionaryapi.dev/api/v2/entries/en/';
 
   /**
    * Check if a word exists in the English dictionary

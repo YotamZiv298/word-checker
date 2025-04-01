@@ -17,12 +17,12 @@ export const useKeyboard = () => {
         eventEmitter.emit(ACTIONS.ADD_CHAR, key.toUpperCase());
         event.preventDefault();
       }
-      // Handle Enter key
+      // Handle the Enter key
       else if (key === 'Enter') {
         eventEmitter.emit(ACTIONS.ENTER);
         event.preventDefault();
       }
-      // Handle Backspace key
+      // Handle the Backspace key
       else if (key === 'Backspace') {
         eventEmitter.emit(ACTIONS.BACKSPACE);
         event.preventDefault();

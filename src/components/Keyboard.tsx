@@ -28,7 +28,7 @@ export const Keyboard = memo(() => {
     try {
       eventEmitter.emit(ACTIONS.ENTER);
     } catch (error) {
-      console.error('Error on enter:', error);
+      console.error('Error when pressing enter:', error);
     }
   }, [eventEmitter]);
 
