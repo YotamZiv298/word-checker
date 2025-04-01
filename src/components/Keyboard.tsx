@@ -1,5 +1,5 @@
 import { memo, useCallback } from 'react';
-import { ACTIONS, KEYBOARD_LAYOUT } from '../constants/gameConstants';
+import { ACTIONS, KEYBOARD_LAYOUT } from '../constants';
 import { useGameContext } from '../hooks/useGameContext';
 
 export const Keyboard = memo(() => {

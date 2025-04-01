@@ -1,10 +1,6 @@
 import type { ReactNode } from 'react';
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import {
-  ACTIONS,
-  DEFAULT_WORD_LENGTH,
-  STATUS_RESET_DELAY,
-} from '../constants/gameConstants';
+import { ACTIONS, DEFAULT_WORD_LENGTH, STATUS_RESET_DELAY } from '../constants';
 import { useWordValidation } from '../hooks/useWordValidation';
 import { GameEventEmitter } from '../services/ActionListener';
 import { GameContext, type WordStatus } from './GameContextValue';

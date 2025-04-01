@@ -1,6 +1,6 @@
 import './App.css';
 import { WordGame } from './components/WordGame';
-import { DEFAULT_WORD_LENGTH } from './constants/gameConstants';
+import { DEFAULT_WORD_LENGTH } from './constants';
 import { GameProvider } from './context/GameContext';
 
 const App = () => {

@@ -1,5 +1,5 @@
 import { useCallback, useEffect } from 'react';
-import { ACTIONS } from '../constants/gameConstants';
+import { ACTIONS } from '../constants';
 import { useGameContext } from './useGameContext';
 
 /**
